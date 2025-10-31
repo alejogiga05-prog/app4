@@ -1,5 +1,6 @@
-streamlit
-pandas
 influxdb-client
+pandas
+streamlit
+matplotlib
+plotly
 scikit-learn
-python-dotenv
