@@ -1,5 +1,6 @@
-streamlit
+influxdb-client
 pandas
-influxdb_client
+streamlit
+matplotlib
+plotly
 scikit-learn
-python-dotenv
