@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import influxdb_client
+from influxdb_client import InfluxDBClient
 from sklearn.linear_model import LinearRegression
 from dotenv import load_dotenv
 import os
@@ -17,7 +17,7 @@ tendencias futuras en variables industriales.
 
 # Cargar credenciales desde .env o Secrets de Streamlit
 load_dotenv()
-url = os.getenv()
+url = os.getenv("INFLUX_URL")
 token = os.getenv("INFLUX_TOKEN")
 org = os.getenv("INFLUX_ORG")
 bucket = os.getenv("INFLUX_BUCKET")
