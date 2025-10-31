@@ -1,5 +1,5 @@
 streamlit
 pandas
-Influxdb-client
+influxdb-client
 scikit-learn
 python-dotenv
