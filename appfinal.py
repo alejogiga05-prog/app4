@@ -1,18 +1,17 @@
 import streamlit as st
 import pandas as pd
-import random
-from datetime import datetime
-from influxdb_client import InfluxDBClient, Point, WritePrecision
-from influxdb_client.client.write_api import SYNCHRONOUS
-from sklearn.linear_model import LinearRegression
+from influxdb_client import InfluxDBClient
+import plotly.express as px
 
-# ==========================================
-# 🔧 CONFIGURACIÓN DE CONEXIÓN A INFLUXDB
-# ==========================================
-INFLUXDB_URL = "https://us-east-1-1.aws.cloud2.influxdata.com"  # Cambia por tu URL
-INFLUXDB_TOKEN = "TU_TOKEN_AQUI"
-INFLUXDB_ORG = "TU_ORG"
-INFLUXDB_BUCKET = "ecopack-sensores-victor-alejandro"
+# --- Configuración de conexión ---
+INFLUXDB_URL = "https://us-east-1-1.aws.cloud2.influxdata.com"
+INFLUXDB_TOKEN = "JcKXoXE30JQvV9Ggb4-zv6sQc0Zh6B6Haz5eMRW0FrJEduG2KcFJN9-7RoYvVORcFgtrHR-Q_ly-52pD7IC6JQ=="
+INFLUXDB_ORG = "0925ccf91ab36478"
+INFLUXDB_BUCKET = "EXTREME_MANUFACTURING"
+
+client = InfluxDBClient(url=INFLUXDB_URL, token=INFLUXDB_TOKEN, org=INFLUXDB_ORG)
+query_api = client.query_api()
+
 
 client = InfluxDBClient(url=INFLUXDB_URL, token=INFLUXDB_TOKEN, org=INFLUXDB_ORG)
 write_api = client.write_api(write_options=SYNCHRONOUS)
