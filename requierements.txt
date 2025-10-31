@@ -1,4 +1,5 @@
-streamlit==1.39.0
-pandas==2.2.3
-influxdb-client==1.44.0
-scikit-learn==1.5.2
+streamlit
+pandas
+influxdb-client
+scikit-learn
+python-dotenv
