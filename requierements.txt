@@ -1,4 +1,4 @@
-influxdb-client
+influxdb
 streamlit
 pandas
 scikit-learn
