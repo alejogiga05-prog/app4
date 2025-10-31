@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import InfluxDBClient
+import influxdb_client
 from sklearn.linear_model import LinearRegression
 from dotenv import load_dotenv
 import os
